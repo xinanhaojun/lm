@@ -23,7 +23,7 @@
             window.alert("请复制链接，用浏览器打开");
 
         }
-             function SetCopyContent() {
+        function SetCopyContent() {
             window.event.returnValue = false;
             var content = document.title + "/r/n";
             content += document.getElementById("txt1").value + "/r/n";
@@ -58,8 +58,9 @@
         请复制后，浏览器打开
     </div>
     <hr />
+ <input type="button" value="复制文本框中的值"  onclick="SetCopyContent();" />
 <input id="txt1" type="text" value="Hello World!"  onclick="getTxtSelect(event)"/>
-<input type="button" value="复制文本框中的值"  onclick="SetCopyContent();" />
+
     </form>
 </body>
 </html>
