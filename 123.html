@@ -47,13 +47,11 @@
 <body onload="screenInfo();" oncopy="forbidCopy();" >
     <form id="form1" runat="server">
     <div id="divClipBoard" onclick="operClipBoard();" >
-        https://www.jb51.net
+        请复制后，浏览器打开
     </div>
     <hr />
-    输入密码：
-    <input type="text" oncopy="window.alert('禁止复制!');return false;" />
-    再输入一边密码：
-    <input type="text" onpaste="window.alert('禁止粘贴!');return false;" />
+<input id="txt1" type="text" value="Hello World!"  onclick="getTxtSelect(event)"/>
+<input type="button" value="复制文本框中的值"  onclick="SetCopyContent();" />
     </form>
 </body>
 </html>
