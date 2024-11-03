@@ -23,6 +23,14 @@
             window.alert("您的分辨率是：" + window.screen.width + " " + window.screen.height);
 
         }
+             function SetCopyContent() {
+            window.event.returnValue = false;
+            var content = document.title + "/r/n";
+            content += document.getElementById("txt1").value + "/r/n";
+            content += "本资源来自 " + this.location.href;
+            window.clipboardData.setData('Text', content);
+            alert("复制成功，请粘贴到你的QQ/MSN上推荐给你的好友");
+        }
 
         //复制地址给好友
         function operClipBoard() {
