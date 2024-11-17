@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <br><br>一、点击复制文本框内容的代码:<br><br>
+<script type="text/javascript"> 
+    function jsCopy(){ 
+        var e=document.getElementById("content");//对象是content 
+        e.select(); //选择对象 
+        document.execCommand("Copy"); //执行浏览器复制命令
+
+       alert("已复制好，可贴粘。"); 
+    } 
+</script> 
+<textarea cols="60" name="content" rows="2" id="content">www.511111111112nx.net</textarea> 
+<input type=button value="复制" onclick="jsCopy()">
+<br><br>二、点击复制文本框内容的代码:<br><br>
+<SCRIPT language=JavaScript>
+<!--
+function MM_goToURL() { //v3.0
+var i, args=MM_goToURL.arguments; document.MM_returnValue = false;
+for (i=0; i<(args.length-1); i+=2) eval(args[i]+".location='"+args[i+1]+"'");
+}
+function JM_cc(ob){
+var obj=MM_findObj(ob); if (obj) {
+obj.select();js=obj.createTextRange();js.execCommand("Copy");}
+}
+function MM_findObj(n, d) { //v4.0
+var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+if(!x && document.getElementById) x=document.getElementById(n); return x;
+}
+//-->
+</SCRIPT>
+<FORM action="" method=post name=form1>
+<TEXTAREA cols=60 name=js_1 rows=2 wrap=VIRTUAL>www.52nx.net</textarea>
+</form>
+<INPUT name=Button onclick="JM_cc('js_1')" type=button value=复制>
+<br><br>三、点击复制文本框内容的代码:<br><br>
+<script> 
+function oCopy(obj){ 
+obj.select(); 
+js=obj.createTextRange(); 
+js.execCommand("Copy") 
+} 
+</script>
+<input onclick="oCopy(this)" value=www.52nx.net>
+<br><br>四、点击复制标题和地址的代码:<br><br>
+<title>www.52nx.net</title>
+<input type="button" name="Submit" onClick='copyToClipBoard()' value="复制本页地址，传给QQ/MSN上的好友">
+<script language="javascript">
+   function copyToClipBoard(){
+    var clipBoardContent="";
+    clipBoardContent+=document.title;
+    clipBoardContent+="";
+    clipBoardContent+=this.location.href;
+    window.clipboardData.setData("Text",clipBoardContent);
+    alert("复制成功，请粘贴到你的QQ/MSN上推荐给你的好友");
+}
+</script>
+<br><br>五、点击复制网址的代码:<br><br>
+<script type="text/javascript"> 
+function copyText(obj) 
+{ 
+var rng = document.body.createTextRange(); 
+rng.moveToElementText(obj); 
+rng.scrollIntoView(); 
+rng.select(); 
+rng.execCommand("Copy"); 
+rng.collapse(false);
+alert("复制成功，请粘贴到你的QQ/MSN上发送给你的好友。");   <!--这句根据需要加，可有可无-->
+} 
+</script> 
+以下是代码片段：
+<span id="tbid">http://www.52nx.net<;/span> 
+[<a href="#" onclick="copyText(document.all.tbid)">点击复制</a>]
+
+</body>
+</html>
