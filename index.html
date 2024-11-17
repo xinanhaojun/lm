@@ -1,26 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
-    <script>
-        function copyUrl() {
-            alert(https://lm.078000.xyz/lm);
-            window.clipboardData.setData("Text",this.location.href);
-            alert("复制成功！");
-        }
-    </script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Centered Script</title>
+<style>
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* 或者其他指定高度 */
+}
+</style>
 </head>
 <body>
-    <div class="top-bar-guidance" id="app" style="display: none;">
-		<p>
-			点击右上角<img src="//gw.alicdn.com/tfs/TB1xwiUNpXXXXaIXXXXXXXXXXXX-55-55.png" class="icon-safari"/> Safari打开
-		</p>
-		<p>
-			使用Safari浏览器可以继续访问本站哦~
-		</p>
-	</div>
-<div id="main">
-    <button onclick="copyUrl()" >点击复制商场链接，请在浏览器打开</button>
+
+ <script type="text/javascript"> 
+    function jsCopy(){ 
+        var e=document.getElementById("content");//对象是content 
+        e.select(); //选择对象 
+        document.execCommand("Copy"); //执行浏览器复制命令
+
+       alert("已经复制成功，请在在浏览器粘贴打开"); 
+    } 
+</script> 
+<textarea cols="1" name="content" rows="1" id="content">https://mall.078000.xyz</textarea> 
+<div class="container">
+<input type=button value="点击按钮，复制商城地址，然后再浏览器粘贴打开" onclick="jsCopy()">
 </div>
 </body>
 </html>
